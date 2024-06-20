@@ -25,7 +25,7 @@ Proyek ini menggunakan Firebase sebagai server API dan Firestore sebagai basis d
 
 ## Instalasi
 1. **Clone Repositori**:
-   git clone https://github.com/Affan071203/UAS-TI4C-pemograman-seluler.git
+   git clone https://github.com/Affan071203/revisi-new.git
    cd UAS-TI4C-pemograman-seluler
 
 2. **Instal Dependensi**:
