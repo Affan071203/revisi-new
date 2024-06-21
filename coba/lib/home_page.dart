@@ -3,7 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'profile_page.dart';
 import 'search_page.dart';
 import 'history.dart';
-import 'detail_page.dart'; // Import halaman detail
+import 'detail_page.dart'; 
 
 class HomePage extends StatelessWidget {
   final String email;
@@ -89,7 +89,7 @@ class HomePage extends StatelessWidget {
             ListTile(
               title: Text('Home', style: TextStyle(color: const Color.fromARGB(255, 247, 246, 246))),
               onTap: () {
-                Navigator.pop(context); // Close the drawer
+                Navigator.pop(context); 
               },
             ),
             ListTile(
@@ -110,8 +110,7 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-// Widget Rekomendasi
-// Widget Rekomendasi
+
 // Widget Rekomendasi
 class RecommendationsWidget extends StatelessWidget {
   @override

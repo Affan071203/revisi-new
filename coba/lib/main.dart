@@ -143,7 +143,7 @@ class _LoginPageState extends State<LoginPage> {
                         return CircularProgressIndicator();
                       },
                     )
-                  : CircularProgressIndicator(), // Display loading indicator if image URL hasn't been fetched yet
+                  : CircularProgressIndicator(), 
               SizedBox(height: 40),
               TextField(
                 controller: _emailController,

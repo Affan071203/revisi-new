@@ -39,10 +39,10 @@ class _EditOrderPageState extends State<EditOrderPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Edit Order'),
-        backgroundColor: Colors.black, // Netflix uses black as the app bar color
-        elevation: 0, // Remove elevation for a flat look
+        backgroundColor: Colors.black, 
+        elevation: 0, 
       ),
-      backgroundColor: Colors.black, // Set background color to black
+      backgroundColor: Colors.black, 
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
@@ -68,7 +68,7 @@ class _EditOrderPageState extends State<EditOrderPage> {
               child: ElevatedButton(
                 onPressed: _updateOrder,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red, // Netflix uses red for its buttons
+                  backgroundColor: Colors.red, 
                   padding: EdgeInsets.symmetric(horizontal: 40, vertical: 16),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
@@ -92,12 +92,12 @@ class _EditOrderPageState extends State<EditOrderPage> {
   Widget _buildTextField(TextEditingController controller, String labelText) {
     return TextField(
       controller: controller,
-      style: TextStyle(color: Colors.white), // Text color white
+      style: TextStyle(color: Colors.white), 
       decoration: InputDecoration(
         labelText: labelText,
-        labelStyle: TextStyle(color: Colors.white.withOpacity(0.8)), // Label color white with opacity
+        labelStyle: TextStyle(color: Colors.white.withOpacity(0.8)), 
         focusedBorder: UnderlineInputBorder(
-          borderSide: BorderSide(color: Colors.white), // Underline color white
+          borderSide: BorderSide(color: Colors.white), 
         ),
       ),
     );

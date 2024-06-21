@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'EditOrderPage.dart'; // Import halaman EditOrderPage
+import 'EditOrderPage.dart';
 
 class HistoryPage extends StatefulWidget {
   @override
@@ -41,6 +41,20 @@ class _HistoryPageState extends State<HistoryPage> {
         _purchasedMoviesFuture = _fetchPurchasedMovies(); // Refresh the list after editing
       });
     });
+  }
+
+  void _deleteOrder(String documentId) async {
+    try {
+      await FirebaseFirestore.instance.collection('orders').doc(documentId).delete();
+      setState(() {
+        _purchasedMoviesFuture = _fetchPurchasedMovies(); // Refresh the list after deleting
+      });
+    } catch (e) {
+      print("Failed to delete document: $e");
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Failed to delete the order. Please try again.')),
+      );
+    }
   }
 
   @override
@@ -105,9 +119,18 @@ class _HistoryPageState extends State<HistoryPage> {
                                 Text('Purchased on: $purchaseDate', style: TextStyle(color: Colors.white70)),
                               ],
                             ),
-                            trailing: IconButton(
-                              icon: Icon(Icons.edit, color: Colors.white),
-                              onPressed: () => _editOrder(context, movie['documentId'], movie),
+                            trailing: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                IconButton(
+                                  icon: Icon(Icons.edit, color: Colors.white),
+                                  onPressed: () => _editOrder(context, movie['documentId'], movie),
+                                ),
+                                IconButton(
+                                  icon: Icon(Icons.delete, color: Colors.white),
+                                  onPressed: () => _deleteOrder(movie['documentId']),
+                                ),
+                              ],
                             ),
                           ),
                         );

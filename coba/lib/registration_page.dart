@@ -34,7 +34,7 @@ class _RegisterPageState extends State<RegisterPage> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/background.jpg'), // Ganti dengan gambar latar belakang yang sesuai
+            image: AssetImage('assets/background.jpg'), 
             fit: BoxFit.cover,
           ),
         ),
@@ -93,7 +93,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ElevatedButton(
                   onPressed: _register,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.red, // Gunakan backgroundColor sebagai pengganti primary
+                    backgroundColor: Colors.red, 
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
                     ),

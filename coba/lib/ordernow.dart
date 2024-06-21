@@ -28,7 +28,7 @@ class orderNow extends StatelessWidget {
         'timestamp': FieldValue.serverTimestamp(),
       });
 
-      Navigator.pop(context); // Close the orderNow
+      Navigator.pop(context); 
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Pesanan berhasil')));
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Failed to place order: $e')));
@@ -71,7 +71,7 @@ class orderNow extends StatelessWidget {
   onPressed: () => _placeOrder(context),
   child: Text('Place Order'),
   style: ElevatedButton.styleFrom(
-    backgroundColor: Colors.red, // Ubah warna latar belakang tombol menjadi merah
+    backgroundColor: Colors.red, 
   ),
 ),
 

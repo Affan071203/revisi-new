@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart'; // Import FirebaseAuth
-import 'package:cloud_firestore/cloud_firestore.dart'; // Import Firestore
-import 'main.dart'; // Import halaman login Anda
+import 'package:firebase_auth/firebase_auth.dart'; 
+import 'package:cloud_firestore/cloud_firestore.dart'; 
+import 'main.dart'; 
 
 class ProfilePage extends StatelessWidget {
   final String email;
@@ -12,7 +12,7 @@ class ProfilePage extends StatelessWidget {
     await FirebaseAuth.instance.signOut(); // Log out dari Firebase
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => LoginPage()), // Ganti dengan halaman login Anda
+      MaterialPageRoute(builder: (context) => LoginPage()), // HALAMAN LOGIN
     );
   }
 
@@ -68,7 +68,7 @@ class ProfilePage extends StatelessWidget {
               onPressed: () => _logOut(context),
               child: Text('Log Out'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red, // Ubah warna tombol jika diinginkan
+                backgroundColor: Colors.red, 
               ),
             ),
           ],
